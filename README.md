@@ -22,7 +22,6 @@
 - cdrom drive reading
 - image file viewer
 - blissbox support
-- xmb and materialui interfaces
 - d3d9 and d3d10 video drivers
 - dsound audio driver
 - libretro database support
