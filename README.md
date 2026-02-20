@@ -24,7 +24,6 @@
 - blissbox support
 - d3d9 and d3d10 video drivers
 - dsound audio driver
-- libretro database support
 - audio mixer
 - freetype font support
 - extra languages
