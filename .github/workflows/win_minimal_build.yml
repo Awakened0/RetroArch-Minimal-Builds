@@ -48,10 +48,6 @@ jobs:
     - shell: msys2 {0}
       working-directory: RetroArch
       run: |
-        rm *.dll
-    - shell: msys2 {0}
-      working-directory: RetroArch
-      run: |
         ./configure --disable-qt --disable-ffmpeg --disable-sdl2
         make -j8
         for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
