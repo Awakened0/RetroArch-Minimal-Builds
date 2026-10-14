@@ -14,11 +14,11 @@ jobs:
           git
           wget
           make
-          mingw-w64-x86_64-toolchain
-          mingw-w64-x86_64-ntldd
-          mingw-w64-x86_64-zlib
-          mingw-w64-x86_64-pkg-config
-          mingw-w64-x86_64-freetype
+          mingw-w64-ucrt-x86_64-toolchain
+          mingw-w64-ucrt-x86_64-ntldd
+          mingw-w64-ucrt-x86_64-zlib
+          mingw-w64-ucrt-x86_64-pkg-config
+          mingw-w64-ucrt-x86_64-freetype
           unzip
           p7zip
     - uses: actions/checkout@v7
