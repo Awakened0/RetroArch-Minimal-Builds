@@ -54,7 +54,7 @@ jobs:
       run: |
         ./configure --disable-qt --disable-ffmpeg --disable-sdl2
         make -j8
-        for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i mingw | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
+        for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i ucrt64 | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
     - name: Strip exe
       working-directory: RetroArch
       run: strip.exe -s retroarch.exe
