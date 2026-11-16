@@ -29,6 +29,7 @@ jobs:
       working-directory: RetroArch
       run: |
         ./configure --disable-overlay --disable-networking --disable-cheats --disable-accessibility --disable-translate --disable-cdrom --disable-imageviewer --disable-qt --disable-ffmpeg --disable-sdl2 --disable-blissbox --disable-freetype --disable-crtswitchres
+        make -j8
         for i in $(seq 3); do for bin in $(ntldd -R *exe | grep -i ucrt64 | cut -d">" -f2 | cut -d" " -f2); do cp -vu "$bin" . ; done; done
         rm nvdaControllerClient64.dll
     - name: Strip exe
